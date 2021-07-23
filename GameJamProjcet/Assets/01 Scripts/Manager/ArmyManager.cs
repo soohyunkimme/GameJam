@@ -8,15 +8,9 @@ public class ArmyManager : MonoBehaviour
     public Transform backGround;
     public GameObject ArmyPrefabs;
     private int craftAmry = 5;
-    private UIText uiText;
 
     public Image gageBar;
     private float time;
-
-    void Awake()
-    {
-        uiText = GetComponent<UIText>();
-    }
 
     public void CreatArmy()
     {
@@ -24,11 +18,10 @@ public class ArmyManager : MonoBehaviour
         {
             Army army = Instantiate(ArmyPrefabs, backGround).GetComponent<Army>();
             army.Init();
-            GameManager.instance.yourMilitary.Add(army.gameObject);
 
             craftAmry--;
-            uiText.setTextMaxArmy();
-            uiText.setTextCraftArmy(craftAmry);    
+            GameManager.instance.uiText.setTextMaxArmy();
+            GameManager.instance.uiText.setTextCraftArmy(craftAmry);    
         }
     }
 
@@ -41,11 +34,9 @@ public class ArmyManager : MonoBehaviour
             if(time > GameManager.instance.currentTimeCraft)
             {
                 craftAmry++;
-                uiText.setTextCraftArmy(craftAmry);
+                GameManager.instance.uiText.setTextCraftArmy(craftAmry);
                 time = 0;
             }
         }
     }
-
-
 }

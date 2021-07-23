@@ -70,11 +70,12 @@ public class Upgrade_Shop : MonoBehaviour
         {
             GameManager.instance.Gold -= costCraftTime;
             GameManager.instance.currentTimeCraft -= 0.1f;
-            costCraftTime = (int)(craftTimelevel * 2000f);//식 다시세우기
+
 
             Text levelText = btnCraftTime.transform.parent.GetChild(2).GetComponent<Text>();
             craftTimelevel++;
             levelText.text = $"Lv {craftTimelevel}";
+            costCraftTime = (int)(craftTimelevel * 2000f);//식 다시세우기
 
             Text costtext = btnCraftTime.transform.GetChild(0).GetComponent<Text>();
             GameManager.instance.uiText.setText(costtext, costCraftTime);

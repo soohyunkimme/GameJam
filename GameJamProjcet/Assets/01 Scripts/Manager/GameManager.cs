@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    
 
     [Header("¿Á»≠")]
     public int Gold = 0;
@@ -15,12 +17,13 @@ public class GameManager : MonoBehaviour
     public int maxArmy = 5;
     public int maxCraftAmry = 5;
     public float currentTimeCraft = 6f;
-    public List<GameObject> listMilitary = new List<GameObject>();
-    public List<GameObject> yourMilitary = new List<GameObject>();
+    public List<Sprite> listMilitary = new List<Sprite>();
+    public List<int> yourMilitary = new List<int>();
 
     [Header("Level")]
 
     public UIText uiText;
+    public SceneChange sceneChange;
 
     void Awake()
     {
@@ -34,5 +37,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         uiText = GetComponent<UIText>();
+        sceneChange = GetComponent<SceneChange>();
     }
 }
