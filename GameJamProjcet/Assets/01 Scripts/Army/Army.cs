@@ -6,23 +6,25 @@ using UnityEngine.UI;
 public class Army : MonoBehaviour
 {
     public int level;
+    private Text textMaxArmy;
 
     private DragbleArmy dragbleArmy;
     private Image armyImage;
 
-    public void Init()
+    public void Init(Text text)
     {
         armyImage = GetComponent<Image>();
 
         level = 0;
         GameManager.instance.yourMilitary.Add(this.level);
         armyImage.sprite = GameManager.instance.listMilitary[level];
+        textMaxArmy = text;
         //this.transform.position = new Vector2(Random.Range(transform.position.x);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (level == 3) return;
+        if (level == 2) return;
         dragbleArmy = GetComponent<DragbleArmy>();
         if (dragbleArmy.isDragging)
         {
@@ -31,7 +33,7 @@ public class Army : MonoBehaviour
             {
                 army.Upgrade();
                 GameManager.instance.yourMilitary.Remove(this.level);
-                GameManager.instance.uiText.setTextMaxArmy();
+                GameManager.instance.uiText.setTextMaxArmy(textMaxArmy);
                 Destroy(this.gameObject);
             }
         }
@@ -44,5 +46,6 @@ public class Army : MonoBehaviour
         GameManager.instance.yourMilitary.Add(this.level);
 
         armyImage.sprite = GameManager.instance.listMilitary[level];
+        
     }
 }

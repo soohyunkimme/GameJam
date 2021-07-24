@@ -18,6 +18,10 @@ public class Upgrade_Shop : MonoBehaviour
     private int costMaxCraftArmy = 1000;
     private int costCraftTime = 1000;
 
+    public Text textMaxArmy;
+    public Text textCraftArmy;
+    public Text textGold;
+
 
     public void Upgrade_maxArmy()
     {
@@ -33,8 +37,8 @@ public class Upgrade_Shop : MonoBehaviour
 
             Text costText = btnMaxArmy.transform.GetChild(0).GetComponent<Text>();
             GameManager.instance.uiText.setText(costText, costMaxArmy);
-            GameManager.instance.uiText.setText(GameManager.instance.uiText.textGold, GameManager.instance.Gold);
-            GameManager.instance.uiText.setTextMaxArmy();
+            GameManager.instance.uiText.setText(textGold, GameManager.instance.Gold);
+            GameManager.instance.uiText.setTextMaxArmy(textMaxArmy);
             if (maxArmylevel > 39)
             {
                 btnMaxArmy.interactable = false;
@@ -56,7 +60,7 @@ public class Upgrade_Shop : MonoBehaviour
 
             Text costtext = btnMaxCraftArmy.transform.GetChild(0).GetComponent<Text>();
             GameManager.instance.uiText.setText(costtext, costMaxCraftArmy);
-            GameManager.instance.uiText.setText(GameManager.instance.uiText.textGold, GameManager.instance.Gold);
+            GameManager.instance.uiText.setText(textGold, GameManager.instance.Gold);
             if (maxCraftArmylevel > 39)
             {
                 btnMaxCraftArmy.interactable = false;
@@ -79,7 +83,7 @@ public class Upgrade_Shop : MonoBehaviour
 
             Text costtext = btnCraftTime.transform.GetChild(0).GetComponent<Text>();
             GameManager.instance.uiText.setText(costtext, costCraftTime);
-            GameManager.instance.uiText.setText(GameManager.instance.uiText.textGold, GameManager.instance.Gold);
+            GameManager.instance.uiText.setText(textGold, GameManager.instance.Gold);
 
             if (craftTimelevel > 39)
             {

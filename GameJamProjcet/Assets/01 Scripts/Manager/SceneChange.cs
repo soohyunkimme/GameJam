@@ -7,16 +7,19 @@ public class SceneChange : MonoBehaviour
 {
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        
     }
 
     public void ChangeToBattleScene()
     {
         SceneManager.LoadScene("BattleScene");
+        PlayerPrefs.SetInt("a", 123);
+        PlayerPrefs.GetInt("a");
     }
 
     public void ChangeToGameScene()
     {
         SceneManager.LoadScene("GameScene");
+        
     }
 }

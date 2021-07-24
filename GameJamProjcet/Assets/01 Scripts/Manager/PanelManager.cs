@@ -19,6 +19,11 @@ public class PanelManager : MonoBehaviour
     public RectTransform Army;
     private RectTransform beforeContent;
 
+    private void Start()
+    {
+        
+    }
+
     private void InitBeforeButton(Button button)
     {
         if (btnIsPressed != null)

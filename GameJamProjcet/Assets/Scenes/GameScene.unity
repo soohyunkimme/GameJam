@@ -476,6 +476,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backGround: {fileID: 889939143}
   ArmyPrefabs: {fileID: 5322703633506722322, guid: 4be819a5c96351442b5abfb061a2558c, type: 3}
+  textCraftArmy: {fileID: 1576193112}
+  textMaxArmy: {fileID: 1377488375}
   gageBar: {fileID: 334202619}
 --- !u!1 &267554982
 GameObject:
@@ -590,6 +592,9 @@ MonoBehaviour:
   maxArmylevel: 0
   maxCraftArmylevel: 0
   craftTimelevel: 0
+  textMaxArmy: {fileID: 1393992439}
+  textCraftArmy: {fileID: 2001900024}
+  textGold: {fileID: 998965614}
 --- !u!114 &317057752 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5709713243226768113, guid: febf43a986beeba408f15eb9449f192b, type: 3}
@@ -1744,7 +1749,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC804\uD22C"
+  m_Text: "\uD6C8\uB828"
 --- !u!222 &1213591843
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1819,7 +1824,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0c5a97abc554c1d459b4171469a0be32, type: 3}
   - {fileID: 21300000, guid: 48ae1d98aef1df34c8666c679f034d24, type: 3}
   - {fileID: 21300000, guid: ac75a2edc1778534eaf00111767629ff, type: 3}
-  - {fileID: 21300000, guid: ac75a2edc1778534eaf00111767629ff, type: 3}
   yourMilitary: 
   uiText: {fileID: 0}
   sceneChange: {fileID: 0}
@@ -1835,9 +1839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfeeaf133dd8d534491bea972cce42bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textGold: {fileID: 998965614}
-  textMaxArmy: {fileID: 1393992439}
-  textCraftArmy: {fileID: 1576193112}
 --- !u!114 &1297365423
 MonoBehaviour:
   m_ObjectHideFlags: 0

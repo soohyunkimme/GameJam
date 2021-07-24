@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
 
     [Header("재화")]
     public int Gold = 0;
-    public int Diamond = 0;
-    public int document = 0;
 
     [Header("군대 관리")]
     public int maxArmy = 5;

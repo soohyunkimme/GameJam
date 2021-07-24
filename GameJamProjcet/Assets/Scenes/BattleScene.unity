@@ -421,6 +421,7 @@ GameObject:
   - component: {fileID: 572814466}
   - component: {fileID: 572814465}
   - component: {fileID: 572814464}
+  - component: {fileID: 572814467}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -510,6 +511,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &572814467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572814462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70355df18c43b31478daaf0b13656119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnBack: {fileID: 1950518992}
 --- !u!1 &578890336
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,10 +823,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f835e74ee1faccb4ca0b740ca4636800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armyLevel_0: {fileID: 6832195468936093464, guid: c49ac94c755c6a0499bc2fce0368becd, type: 3}
-  armyLevel_1: {fileID: 6832195468936093464, guid: c49ac94c755c6a0499bc2fce0368becd, type: 3}
-  armyLevel_2: {fileID: 6832195468936093464, guid: c49ac94c755c6a0499bc2fce0368becd, type: 3}
-  armyLevel_3: {fileID: 6832195468936093464, guid: c49ac94c755c6a0499bc2fce0368becd, type: 3}
+  armyLevel_0: {fileID: 2352052726618456650, guid: d3ec25a6e2153ba4abd653b5e52ce6bb, type: 3}
+  armyLevel_1: {fileID: 2352052726618456650, guid: d3ec25a6e2153ba4abd653b5e52ce6bb, type: 3}
+  armyLevel_2: {fileID: 2352052726618456650, guid: d3ec25a6e2153ba4abd653b5e52ce6bb, type: 3}
   spawnPoint: {fileID: 1768327913}
   goldText: {fileID: 1595996287}
   dps: 0
@@ -1083,8 +1096,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133219468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalPosition: {x: 0, y: -3.8258, z: 0}
+  m_LocalScale: {x: 6, y: 6.3486, z: 1}
   m_Children: []
   m_Father: {fileID: 578890337}
   m_RootOrder: 0
