@@ -5,21 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    public GameObject armyPrefab;
 
     public void ChangeToBattleScene()
     {
         SceneManager.LoadScene("BattleScene");
-        PlayerPrefs.SetInt("a", 123);
-        PlayerPrefs.GetInt("a");
+        
     }
 
     public void ChangeToGameScene()
     {
         SceneManager.LoadScene("GameScene");
-        
+        GameManager.instance.yourMilitary.RemoveRange(0, GameManager.instance.yourMilitary.Count);
     }
 }

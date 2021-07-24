@@ -45,7 +45,12 @@ public class Army : MonoBehaviour
         level++;
         GameManager.instance.yourMilitary.Add(this.level);
 
-        armyImage.sprite = GameManager.instance.listMilitary[level];
+
         
+    }
+
+    void Update()
+    {
+        armyImage.sprite = GameManager.instance.listMilitary[level];
     }
 }

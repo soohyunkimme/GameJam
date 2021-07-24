@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    
+
 
     [Header("¿Á»≠")]
     public int Gold = 0;
@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     public List<int> yourMilitary = new List<int>();
 
     [Header("Level")]
+    public int maxArmylevel = 0;
+    public int maxCraftArmylevel = 0;
+    public int craftTimelevel = 0;
 
     public UIText uiText;
     public SceneChange sceneChange;
@@ -28,9 +31,15 @@ public class GameManager : MonoBehaviour
         if (instance != null)
         {
             Debug.Log("GameManager");
+            Destroy(gameObject);
         }
-        instance = this;
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
+
 
     void Start()
     {
