@@ -464,6 +464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backGround: {fileID: 889939143}
   ArmyPrefabs: {fileID: 5322703633506722322, guid: 4be819a5c96351442b5abfb061a2558c, type: 3}
+  textGold: {fileID: 998965614}
   textCraftArmy: {fileID: 1576193112}
   textMaxArmy: {fileID: 1393992439}
   gageBar: {fileID: 334202619}

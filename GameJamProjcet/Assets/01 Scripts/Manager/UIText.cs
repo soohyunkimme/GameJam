@@ -7,7 +7,15 @@ public class UIText : MonoBehaviour
 {
     public void setText(Text text, int gold)
     {
-        text.text = string.Format("{0:#,###}", gold);
+        if (gold == 0)
+        {
+            text.text = gold.ToString();
+        }
+        else
+        {
+            text.text = string.Format("{0:#,###}", gold);
+        }
+
     }
 
     public void setTextMaxArmy(Text text)

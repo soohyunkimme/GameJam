@@ -20,6 +20,7 @@ public class BattleManager : MonoBehaviour
 
     void Start()
     {
+        GameManager.instance.uiText.setText(goldText, GameManager.instance.Gold);
         foreach (var item in GameManager.instance.yourMilitary)
         {
             dps += item;

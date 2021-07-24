@@ -18,29 +18,45 @@ public class Upgrade_Shop : MonoBehaviour
     public Text textCraftArmy;
     public Text textGold;
 
-    void Start()
-    {
-
-    }
-
-    public void setUpgrade()
+    public void OnEnable()
     {
         Text levelText = btnMaxArmy.transform.parent.GetChild(2).GetComponent<Text>();
         levelText.text = $"Lv {GameManager.instance.maxArmylevel}";
         Text costText = btnMaxArmy.transform.GetChild(0).GetComponent<Text>();
+        costMaxArmy = (GameManager.instance.maxArmy * 2000);
         GameManager.instance.uiText.setText(costText, costMaxArmy);
 
         levelText = btnMaxCraftArmy.transform.parent.GetChild(2).GetComponent<Text>();
         levelText.text = $"Lv {GameManager.instance.maxCraftArmylevel}";
         costText = btnMaxCraftArmy.transform.GetChild(0).GetComponent<Text>();
+        costMaxCraftArmy = (GameManager.instance.maxCraftAmry * 2000);
         GameManager.instance.uiText.setText(costText, costMaxCraftArmy);
 
         levelText = btnCraftTime.transform.parent.GetChild(2).GetComponent<Text>();
         levelText.text = $"Lv {GameManager.instance.craftTimelevel}";
-
-        Text costtext = btnCraftTime.transform.GetChild(0).GetComponent<Text>();
-        GameManager.instance.uiText.setText(costtext, costCraftTime);
+        costCraftTime = (int)(GameManager.instance.craftTimelevel * 2000f);
+        costText = btnCraftTime.transform.GetChild(0).GetComponent<Text>();
+        GameManager.instance.uiText.setText(costText, costCraftTime);
     }
+
+    //public void setUpgrade()
+    //{
+    //    Text levelText = btnMaxArmy.transform.parent.GetChild(2).GetComponent<Text>();
+    //    levelText.text = $"Lv {GameManager.instance.maxArmylevel}";
+    //    Text costText = btnMaxArmy.transform.GetChild(0).GetComponent<Text>();
+    //    GameManager.instance.uiText.setText(costText, costMaxArmy);
+
+    //    levelText = btnMaxCraftArmy.transform.parent.GetChild(2).GetComponent<Text>();
+    //    levelText.text = $"Lv {GameManager.instance.maxCraftArmylevel}";
+    //    costText = btnMaxCraftArmy.transform.GetChild(0).GetComponent<Text>();
+    //    GameManager.instance.uiText.setText(costText, costMaxCraftArmy);
+
+    //    levelText = btnCraftTime.transform.parent.GetChild(2).GetComponent<Text>();
+    //    levelText.text = $"Lv {GameManager.instance.craftTimelevel}";
+
+    //    Text costtext = btnCraftTime.transform.GetChild(0).GetComponent<Text>();
+    //    GameManager.instance.uiText.setText(costtext, costCraftTime);
+    //}
 
     public void Upgrade_maxArmy()
     {

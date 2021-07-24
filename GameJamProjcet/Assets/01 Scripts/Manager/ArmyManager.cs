@@ -8,11 +8,21 @@ public class ArmyManager : MonoBehaviour
     public Transform backGround;
     public GameObject ArmyPrefabs;
     private int craftAmry = 5;
+
+    public Text textGold;
     public Text textCraftArmy;
     public Text textMaxArmy;
 
     public Image gageBar;
     private float time;
+
+
+    private void Start()
+    {
+        GameManager.instance.uiText.setText(textGold, GameManager.instance.Gold);
+        GameManager.instance.uiText.setTextMaxArmy(textMaxArmy);
+        GameManager.instance.uiText.setTextCraftArmy(textCraftArmy, craftAmry);
+    }
 
     public void CreatArmy()
     {

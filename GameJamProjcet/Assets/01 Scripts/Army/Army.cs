@@ -19,7 +19,7 @@ public class Army : MonoBehaviour
         GameManager.instance.yourMilitary.Add(this.level);
         armyImage.sprite = GameManager.instance.listMilitary[level];
         textMaxArmy = text;
-        //this.transform.position = new Vector2(Random.Range(transform.position.x);
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -44,9 +44,6 @@ public class Army : MonoBehaviour
         GameManager.instance.yourMilitary.Remove(this.level);
         level++;
         GameManager.instance.yourMilitary.Add(this.level);
-
-
-        
     }
 
     void Update()
